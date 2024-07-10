@@ -1,5 +1,5 @@
 <template>
-  <div class="container-page mb-72">
+  <div class="container-page mb-44">
     <div class="vacancy__card__wrapper p-3">
       <vacancy-card
         v-for="(vacancy, index) in displayedVacancies" 
@@ -130,6 +130,9 @@ if ( remaining__profs__num.value > 10 & remaining__profs__num.value < 20 ) {
   }
   .vacancy__card__wrapper {
     display: none !important;
+  }
+  .container-page{
+    margin-bottom:70px;
   }
 }
 
