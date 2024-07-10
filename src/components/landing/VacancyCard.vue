@@ -5,6 +5,7 @@
       <div class="pt-3 text-lg"><slot name="vacancy__name" ></slot></div>
       <div class="pb-1 text-sm"><slot name="vacancy__salary" ></slot></div>
       <div class="pt-4 pb-3 text-sm"><slot name="vacancy__quantity" ></slot></div>
+      <div class=""><slot name="vacancy__choices"></slot></div>
     </div>
   </div>
 </template>
