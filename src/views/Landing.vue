@@ -8,17 +8,17 @@
         <p class="in__searching__job hidden">
           Поиск работы в 
           <router-link
-              to="/Employer"
+              to="/404"
               class="border-b border-dashed border-black"
               exact-active-class=""
-            >
+            > 
               России
             </router-link>
         </p>
         <input-block :user-city="userCity"></input-block>
         <div>
           <router-link
-            to="/"
+            to="/404"
             class="in__searching__employee text-myDark border-b border-myDark pt-8 inline-block hover:text-myPurple hover:border-myPurple"
           >
             Я ищу сотрудника

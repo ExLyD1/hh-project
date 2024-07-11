@@ -1,5 +1,6 @@
 import Landing from '@/views/Landing.vue'
 import Employer from '@/views/Employer.vue'
+import NotFound404 from '@/views/NotFound404.vue'
 import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router'
 
 const routes: Array<RouteRecordRaw> = [
@@ -13,6 +14,11 @@ const routes: Array<RouteRecordRaw> = [
     name: 'Employer',
     component: Employer,
   },
+  {
+    path: '/404',
+    name: 'Not_Found',
+    component: NotFound404,
+  }
 ]
 
 const router = createRouter({
