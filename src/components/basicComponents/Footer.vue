@@ -59,7 +59,7 @@
             <img class="w-6" src="../../assets/images/landing/footer/icons8-great-britain-48.png" alt="">
           </div>
         </div>
-
+        
         <div class="flex flex-row gap-10 items-center justify-center header__last__itemqwe12">
           <img class="w-8" src="../../assets/images/landing/footer/icons8-telegram (1).svg" alt="">
           <img class="w-8" src="../../assets/images/landing/footer/icons8-vk (1).svg" alt="">

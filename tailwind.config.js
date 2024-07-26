@@ -46,6 +46,10 @@ module.exports = {
         myVacCol8: 'rgba(249, 225, 147, .4)',
         myVacCol9: 'rgba(209, 228, 254, .4)',
 
+
+        myVacCol22: 'rgba(255, 200, 150, .6)',
+        myVacCol42: 'rgba(180, 200, 250, .6)',
+        myVacCol62: 'rgba(190, 170, 250, .6)',
       }
     },
   },

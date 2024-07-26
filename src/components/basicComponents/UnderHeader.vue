@@ -13,6 +13,14 @@
       <div>
         <router-link
           to="/"
+          class="hover:text-myDarkBlue"
+        >
+          <slot name="underHeader__slot__left"></slot>
+        </router-link>
+      </div>
+      <div>
+        <router-link
+          to="/"
           class="helpBorder"
         >
           Помощь
@@ -26,7 +34,7 @@
           to="/"
           class="px-4 py-2 border rounded-full border-myLightPurple text-myPurple hover:border-myDarkPurple"
         >
-          Создать резюме
+          <slot name="underHeader__slot__right"></slot>
         </router-link>
       </div>
       <div>

@@ -2,7 +2,9 @@
   <Header/>
   <div class="landing-container h-full w-full">
     <div class="container-page p-3">
-      <under-header class="pt-10"></under-header>
+      <under-header class="pt-10">
+        <template #underHeader__slot__right>Создать резюме</template>
+      </under-header>
       <div class="input-landing-field pt-28 pl-60">
         <h1 class="text-4xl font-semibold">Выбирай среди ведущих работодателей</h1>
         <p class="in__searching__job hidden">

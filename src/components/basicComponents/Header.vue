@@ -5,7 +5,7 @@
         <div class="header__items__holder flex flex-row items-center justify-between">
           <div class="mr-24 hover:text-myDarkBlue">
             <router-link
-              to="/Employer"
+              to="/404"
               class="hoverLinkHeader"
               exact-active-class="font-semibold text-myDarkPurple border-b-2 round border-myDarkPurple pb-2 activeLinkHeader"
             >
@@ -34,7 +34,7 @@
         <div class="flex flex-row items-center">
           <div class="header__mentors mr-16 hover:text-myDarkBlue">
             <router-link
-              to="/Employer"
+              to="/404"
               class="hoverLinkHeader"
               exact-active-class="font-semibold text-myDarkPurple border-b-2 round border-myDarkPurple pb-2 activeLinkHeader"
             >
@@ -43,7 +43,7 @@
           </div>
           <div class="hover:text-myDarkBlue">
             <router-link
-              to="/Employer"
+              to="/404"
               class="hoverLinkHeader"
               exact-active-class="font-semibold text-myDarkPurple border-b-2 round border-myDarkPurple pb-2 activeLinkHeader"
             >
@@ -118,7 +118,7 @@
       <div v-if="isBurgerMenuVisible" class="header__adaptive__bottom__info flex flex-col  ">
         <div class="border-y border-myLightGray w-full p-3">
           <router-link
-            to="/Employer"
+            to="/404"
             class="flex flex-row gap-2 items-center"
             exact-active-class=""
           >
