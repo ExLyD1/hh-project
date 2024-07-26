@@ -11,6 +11,8 @@ module.exports = {
 
         myDarkBlack:'rgba(161, 161, 170, 1)',
         myDarkBlackOp:'rgba(161, 161, 170, .2)',
+        myDarkBlackMoreOp:'rgba(161, 161, 170, .4)',
+        myDarkBlackMoreOpXl:'rgba(161, 161, 170, .6)',
         myDark:'#0A0A0F',
 
 

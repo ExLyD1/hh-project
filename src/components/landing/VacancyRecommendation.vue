@@ -9,18 +9,21 @@
         <vacancy-card
           :class="vacancy.bg_color"
           class="bg__white vacancy-card cursor-pointer hover:shadow-lg focus:shadow-lg"
-          @click="openModal(index)"
+          @click="toggleModal(index)"
         >
           <template v-slot:vacancy__name>{{ vacancy.name }}</template>
           <template v-slot:vacancy__salary>{{ vacancy.salary }}</template>
           <template v-slot:vacancy__quantity>{{ vacancy.quantity }}</template>
         </vacancy-card>
 
-        <div v-if="isModalOpen && selectedIndex === index" class="modal">
-          <h3>{{ vacancy.name }}</h3>
-          <p>{{ vacancy.salary }}</p>
-          <p>{{ vacancy.quantity }}</p>
-          <button @click="closeModal">Закрыть</button>
+        <div v-if="isModalOpen && selectedIndex === index" class="modal h-36 p-2 border border-myDarkBlack flex flex-col whitespace-nowrap">
+          <router-link to="/404" v-for="(dataProf, index) in limitedDataBase" :key="index" class="modal__info">
+            <div class="text-myBlue">{{ dataProf.name }}</div>
+            <div v-if="dataProf.salary" class="text-myDarkBlack">{{ dataProf.salary }}, {{ dataProf.quantity }}</div>
+            <div v-else class="text-myDarkBlack">з/п не указана, {{ dataProf.quantity }}</div>
+          </router-link>
+          <router-link to="/404" class="pt-2 text-myDarkBlue">Больше...</router-link>
+
         </div>
       </div>
       
@@ -53,11 +56,9 @@
   </div>
 </template>
 
-
 <script setup>
 import VacancyCard from './VacancyCard.vue';
-import { ref, onMounted } from 'vue';
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
+import { ref } from 'vue';
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import 'swiper/css';
 
@@ -95,6 +96,18 @@ const vacancies__list = ref([
   { name: 'Репетитор', salary: '', quantity: '2 вакансии', bg_color: 'bg-myVacCol7' },
 ]);
 
+const dataBase = ref([
+  { name : 'Программист Py', salary: '85 000 – 435 000 ₽', quantity: '1 Вакансия' }, 
+  { name : 'Программист C#', salary: '', quantity: '1 Вакансия' }, 
+  { name : 'Программист', salary: '', quantity: '1 Вакансия' }, 
+  { name : 'Программист frontend', salary: '55 000 – 100 000 ₽', quantity: '1 Вакансия' }, 
+  { name : 'Програмист ruby', salary: '', quantity: '1 Вакансия' }, 
+  { name : 'Программист C++', salary: '85 000 – 435 000 ₽', quantity: '1 Вакансия' }, 
+  
+])
+
+const limitedDataBase = ref(dataBase.value.slice(0,2))
+
 const getLastNum = (num) => num % 10;
 
 if (vacancies__list.value.length >= 13) {
@@ -121,15 +134,16 @@ if (remaining__profs__num.value > 10 && remaining__profs__num.value < 20) {
   remaining__profs__word.value = 'вакансий';
 }
 
-const openModal = (index) => {
-  selectedIndex.value = index;
-  isModalOpen.value = true;
+const toggleModal = (index) => {
+  if (isModalOpen.value && selectedIndex.value === index) {
+    isModalOpen.value = false;
+    selectedIndex.value = null;
+  } else {
+    isModalOpen.value = true;
+    selectedIndex.value = index;
+  }
 };
 
-const closeModal = () => {
-  isModalOpen.value = false;
-  selectedIndex.value = null;
-};
 </script>
 
 <style scoped>
@@ -153,13 +167,14 @@ const closeModal = () => {
 
 .modal {
   background-color: white;
-  padding: 20px;
   margin-top: 10px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   width: 100%;
   box-sizing: border-box;
 }
-
+.modal__info{
+  font-size: 15px;
+}
 @media screen and (max-width: 610px) {
   .swiper__wrapper {
     display: block !important;

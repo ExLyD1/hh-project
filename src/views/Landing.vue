@@ -29,7 +29,9 @@
   </div>
   <input-number class="mt-10"></input-number>
   <vacancy-recommendation class="mt-12" :user-city="userCity"></vacancy-recommendation>
-  <professions-work class="mt-12 mb-96" :user-city="userCity"></professions-work>
+  <professions-work class="mt-12 mb-12" :user-city="userCity"></professions-work>
+  <WorkInCity class="mb-16" :user-city="userCity"></WorkInCity>
+  <Footer></Footer>
 </template>
 
 <script setup>
@@ -39,6 +41,8 @@ import InputBlock from '@/components/basicComponents/InputBlock.vue'
 import InputNumber from '../components/landing/InputNumber.vue'
 import VacancyRecommendation from '../components/landing/VacancyRecommendation.vue'
 import ProfessionsWork from '@/components/landing/ProfessionsWork.vue'
+import WorkInCity from '@/components/landing/WorkInCity.vue'
+import Footer from '@/components/basicComponents/Footer.vue'
 
 const userCity = 'Москвe';
 </script>
