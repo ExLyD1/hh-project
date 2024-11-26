@@ -6,6 +6,15 @@ module.exports = {
   ],
   theme: {
     extend: {
+      width:{
+        455:'455px',
+      },
+      height: {
+        540:'540px'
+      },
+      left:{
+        350:'350px'
+      },
       colors:{
 
 
@@ -24,10 +33,11 @@ module.exports = {
         myLightPurple:'#e79aff',
         myHoverPurple: '#691883',
 
-
+        myPinkVeryLight: '#f7f4ff',
         myDarkBlue:'#5369FA',
         myBlue:'#8294FA',
         myLightBlue: '#ADD8E6',
+        myLightBlue2: '#e7f2ff',
 
 
         myLightGray: '#ECECEC',

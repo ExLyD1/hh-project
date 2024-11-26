@@ -24,7 +24,7 @@
           class="helpBorder"
         >
           Помощь
-        </router-link>
+        </router-link> 
       </div>
     </div>
 

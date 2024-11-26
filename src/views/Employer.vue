@@ -14,22 +14,37 @@
       </under-header>
 
       <div class="text-center flex flex-col items-center pt-24 employer__startInfo">
-        <h1 class="font-semibold pb-5 text-5xl">Разместите вакансию на grc.ru</h1>
-        <p>И находите сотрудников среди тех, кто хочет у вас работать. grc.ru — сервис №1 по поиску сотрудников в России*</p>
+        <h1 class="font-semibold pb-5 text-5xl">Разместите вакансию на grc.ua</h1>
+        <p>И находите сотрудников среди тех, кто хочет у вас работать. grc.ua — сервис №1 по поиску сотрудников в Украине*</p>
         <button class="text-white py-4 px-12 bg-myBlue rounded text-lg mt-12 mb-10">Разместить вакансию</button>
-        <p class=" text-myDarkBlack w-2/4">* По посещаемости за 31 день среди сайтов по поиску работы и персонала, по данным SimilarWeb по РФ на 01.07.2024 г.</p>
+        <p class=" text-myDarkBlack w-2/4">* По посещаемости за 31 день среди сайтов по поиску работы и персонала, по данным SimilarWeb по UA на 01.07.2024 г.</p>
       </div>
 
     </div>
   </div>
-  <employee-type class="mt-16 mb-96"></employee-type>
+
+  <employee-type class="mt-16"></employee-type>
+
+  <search-type class="mt-32"></search-type>
+
+  <first-steps class="mt-32"></first-steps>
+  
+  <work-benefits></work-benefits>
+
+  <who-active></who-active>
+
+  <employer-footer></employer-footer>
 </template>
 
 <script setup>
 import Header from '@/components/basicComponents/Header.vue';
+import EmployerFooter from '@/components/basicComponents/EmployerFooter.vue';
 import UnderHeader from '@/components/basicComponents/UnderHeader.vue';
 import EmployeeType from '@/components/employer/EmployeeType.vue';
-
+import SearchType from '@/components/employer/SearchType.vue';
+import FirstSteps from '@/components/employer/FirstSteps.vue';
+import WorkBenefits from '@/components/employer/WorkBenefits.vue';
+import WhoActive from '@/components/employer/WhoActive.vue';
 </script>
 
 <style scoped>
@@ -227,7 +242,7 @@ import EmployeeType from '@/components/employer/EmployeeType.vue';
     display: none;
   }
   .employer__startInfo h1{
-    font-size: 27px;
+    font-size: 35px;
     width:270px
   }
   .employer__startInfo p{
